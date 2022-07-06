@@ -22,6 +22,7 @@ stop_words = set(stopwords.words('english'))
 
 
 def nitter():
+    # Credit https://github.com/libredirect/libredirect
     r = requests.get('https://github.com/zedeus/nitter/wiki/Instances')
     soup = BeautifulSoup(r.text, 'html.parser')
     markdownBody = soup.find(class_='markdown-body')
